@@ -2,7 +2,9 @@
 
 namespace App\Repositories\Report;
 
+use App\DTO\ReportDTO;
+
 interface ReportRepositoryInterface
 {
-    public function createReport(string $format);
+    public function createReport(ReportDTO $reportDTO);
 }

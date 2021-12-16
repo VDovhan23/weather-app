@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\DTO\ReportDTO;
 use App\Repositories\Report\ReportRepositoryInterface;
 
 class ReportService
@@ -10,9 +11,11 @@ class ReportService
     {
     }
 
-    public function getReport(string $format)
+    public function getReport(array $airportList, string $format)
     {
-        $this->reportRepository->createReport($format);
+        $reportDTO = new ReportDTO($airportList, $format);
+
+        return $this->reportRepository->createReport($reportDTO);
     }
 
 }
