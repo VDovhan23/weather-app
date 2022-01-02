@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories\Report;
+namespace App\System\Report\Repositories;
 
-use App\DTO\ReportDTO;
+use App\System\Report\DTO\ReportDTO;
 use GuzzleHttp\Client;
 use Illuminate\Config\Repository;
 

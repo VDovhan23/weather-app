@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Services;
+namespace App\System\Report\Services;
 
-use App\DTO\ReportDTO;
-use App\Repositories\Report\ReportRepositoryInterface;
+use App\System\Report\DTO\ReportDTO;
+use App\System\Report\Repositories\ReportRepositoryInterface;
 
 class ReportService
 {

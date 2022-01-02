@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ReportRequest;
-use App\Services\ReportService;
+use App\System\Report\Services\ReportService;
 
 class ReportController extends Controller
 {
