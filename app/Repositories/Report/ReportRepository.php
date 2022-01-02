@@ -12,16 +12,15 @@ class ReportRepository implements ReportRepositoryInterface
     {
     }
 
-    public function createReport(ReportDTO $reportDTO)
+    public function getReport(ReportDTO $reportDTO)
     {
-        $url = sprintf('%s%s.TXT', $this->config->get('reports.url'), 'LEZG');
+        $url = sprintf('%s%s.TXT', $this->config->get('reports.url'), 'KBOS');
 
         $client = new Client();
 
         $response = $client->get($url);
 
-        return response($response->getBody()->getContents())
-            ->header('Content-Type', 'PDF');
+        return response($response->getBody()->getContents());
 
     }
 }

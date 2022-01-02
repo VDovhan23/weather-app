@@ -15,7 +15,7 @@ class ReportService
     {
         $reportDTO = new ReportDTO($airportList, $format);
 
-        return $this->reportRepository->createReport($reportDTO);
+        return $this->reportRepository->getReport($reportDTO);
     }
 
 }

@@ -6,5 +6,5 @@ use App\DTO\ReportDTO;
 
 interface ReportRepositoryInterface
 {
-    public function createReport(ReportDTO $reportDTO);
+    public function getReport(ReportDTO $reportDTO);
 }
