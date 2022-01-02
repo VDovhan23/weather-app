@@ -13,6 +13,7 @@ class ReportController extends Controller
 
     public function report(ReportRequest $reportRequest)
     {
-       return $this->reportService->getReport($reportRequest->airport_list, $reportRequest->output_format);
+
+       return $this->reportService->getReport($reportRequest->airport, $reportRequest->output_format);
     }
 }

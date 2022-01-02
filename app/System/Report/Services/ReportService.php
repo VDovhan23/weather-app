@@ -11,9 +11,9 @@ class ReportService
     {
     }
 
-    public function getReport(array $airportList, string $format)
+    public function getReport(string $airport, string $format)
     {
-        $reportDTO = new ReportDTO($airportList, $format);
+        $reportDTO = new ReportDTO($airport, $format);
 
         return $this->reportRepository->getReport($reportDTO);
     }

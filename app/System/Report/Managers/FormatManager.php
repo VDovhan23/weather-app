@@ -16,7 +16,7 @@ class FormatManager
             throw new InvalidArgumentException(sprintf('Format [%s] is not supported', $format));
         }
 
-        return $this->{$driverMethod};
+        return $this->{$driverMethod}();
     }
 
 

@@ -4,7 +4,7 @@ namespace App\System\Report\DTO;
 
 class ReportDTO
 {
-    public function __construct( public array $airportList, public string $format)
+    public function __construct( public string $airport, public string $format)
     {
     }
 
@@ -13,9 +13,9 @@ class ReportDTO
         return $this->format;
     }
 
-    public function getAirportList(): array
+    public function getAirport(): string
     {
-        return $this->airportList;
+        return $this->airport;
     }
 
 }

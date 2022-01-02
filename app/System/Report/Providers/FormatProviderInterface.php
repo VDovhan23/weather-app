@@ -4,5 +4,5 @@ namespace App\System\Report\Providers;
 
 interface FormatProviderInterface
 {
-    public function formResponse();
+    public function formResponse(string $content);
 }
