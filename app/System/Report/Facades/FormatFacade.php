@@ -2,11 +2,11 @@
 
 namespace App\System\Report\Facades;
 
-use App\System\Report\Providers\FormatProviderInterface;
+use App\System\Report\Providers\AbstractFormatProvider;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @method static FormatProviderInterface provider(string $format)
+ * @method static AbstractFormatProvider provider(string $format)
  */
 
 class FormatFacade extends Facade

@@ -21,9 +21,7 @@ class ReportRepository implements ReportRepositoryInterface
 
         $content = $client->get($url)->getBody()->getContents();
 
-        $response = FormatFacade::provider($reportDTO->getFormat())->formResponse($content);
-
-        return $response;
+        return FormatFacade::provider($reportDTO->getFormat())->formResponse($content);
 
     }
 }

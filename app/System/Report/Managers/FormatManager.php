@@ -2,9 +2,10 @@
 
 namespace App\System\Report\Managers;
 
-use App\System\Report\Providers\FormatProviderInterface;
-use App\System\Report\Providers\Json\JsonProvider;
-use http\Exception\InvalidArgumentException;
+use App\System\Report\Providers\HtmlProvider;
+use App\System\Report\Providers\JsonProvider;
+use App\System\Report\Providers\PdfProvider;
+use Webmozart\Assert\InvalidArgumentException;
 
 class FormatManager
 {
@@ -20,9 +21,17 @@ class FormatManager
     }
 
 
-    private function createJsonProvider(): FormatProviderInterface
+    private function createJsonProvider(): JsonProvider
     {
        return new JsonProvider();
+    }
+
+    private function createPdfProvider(): PdfProvider {
+        return new PdfProvider();
+    }
+
+    private function createHtmlProvider(): HtmlProvider {
+        return new HtmlProvider();
     }
 
 }
