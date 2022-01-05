@@ -20,7 +20,6 @@
             <th scope="col">Visibility</th>
             <th scope="col">Sky conditions</th>
             <th scope="col">Temperature</th>
-            <th scope="col">Windchill</th>
             <th scope="col">Dew Point</th>
             <th scope="col">Relative Humidity</th>
             <th scope="col">Pressure (altimeter)</th>
@@ -34,7 +33,6 @@
                 <td>{{ $report->visibility }}</td>
                 <td>{{ $report->sky_conditions }}</td>
                 <td>{{ $report->temperature }}</td>
-                <td>{{ $report->windchill }}</td>
                 <td>{{ $report->dew_point }}</td>
                 <td>{{ $report->relative_humidity }}]</td>
                 <td>{{ $report->{'pressure(altimeter)'} }}</td>
