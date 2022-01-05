@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ReportRequest;
-use App\Services\ReportService;
+use App\System\Report\Services\ReportService;
 
 class ReportController extends Controller
 {
@@ -11,8 +11,14 @@ class ReportController extends Controller
     {
     }
 
+    /**
+     * @OA\Get(
+     *     path="/report",
+     *     @OA\Response(response="200", description="Get weather report.")
+     * )
+     */
     public function report(ReportRequest $reportRequest)
     {
-       return $this->reportService->getReport($reportRequest->airport_list, $reportRequest->output_format);
+       return $this->reportService->getReport($reportRequest->airport, $reportRequest->output_format);
     }
 }

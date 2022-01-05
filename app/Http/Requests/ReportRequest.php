@@ -32,7 +32,7 @@ class ReportRequest extends FormRequest
                 'string',
                 Rule::in($formatList),
             ],
-            'airport_list' => 'array|required',
+            'airport' => 'string|required',
         ];
     }
 

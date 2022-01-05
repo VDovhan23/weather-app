@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Repositories\Report\ReportRepository;
-use App\Repositories\Report\ReportRepositoryInterface;
+use App\System\Report\Repositories\ReportRepository;
+use App\System\Report\Repositories\ReportRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
