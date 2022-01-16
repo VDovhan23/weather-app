@@ -8,6 +8,6 @@ class HtmlProvider extends AbstractFormatProvider
     {
         $weatherReportObject = $this->getWeatherReportObject($content);
 
-        return view('Report\report', ['report' => $weatherReportObject] );
+        return view('Report\report', ['report' => $weatherReportObject]);
     }
 }

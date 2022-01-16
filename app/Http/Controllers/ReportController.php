@@ -19,6 +19,8 @@ class ReportController extends Controller
      */
     public function report(ReportRequest $reportRequest)
     {
-       return $this->reportService->getReport($reportRequest->airport, $reportRequest->output_format);
+        $header = $reportRequest->header('Output');
+
+        return $this->reportService->getReport($reportRequest->airport, $header);
     }
 }

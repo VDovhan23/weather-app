@@ -24,21 +24,8 @@ class ReportRequest extends FormRequest
      */
     public function rules()
     {
-        $formatList = $this->getAllowedOutputFormat();
-
         return [
-            'output_format' => [
-                'required',
-                'string',
-                Rule::in($formatList),
-            ],
             'airport' => 'string|required',
         ];
-    }
-
-
-    private function getAllowedOutputFormat(): array
-    {
-        return array_keys(config('reports.allowedFormats'));
     }
 }

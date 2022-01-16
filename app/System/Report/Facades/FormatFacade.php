@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Facade;
 /**
  * @method static AbstractFormatProvider provider(string $format)
  */
-
 class FormatFacade extends Facade
 {
 

@@ -5,15 +5,16 @@ namespace App\System\Report\Managers;
 use App\System\Report\Providers\HtmlProvider;
 use App\System\Report\Providers\JsonProvider;
 use App\System\Report\Providers\PdfProvider;
+use App\System\Report\Providers\TextProvider;
 use Webmozart\Assert\InvalidArgumentException;
 
 class FormatManager
 {
     public function provider(string $format)
     {
-        $driverMethod = 'create'. ucfirst($format).'Provider';
+        $driverMethod = 'create' . ucfirst($format) . 'Provider';
 
-        if (! method_exists($this, $driverMethod)){
+        if (!method_exists($this, $driverMethod)) {
             throw new InvalidArgumentException(sprintf('Format [%s] is not supported', $format));
         }
 
@@ -23,15 +24,22 @@ class FormatManager
 
     private function createJsonProvider(): JsonProvider
     {
-       return new JsonProvider();
+        return new JsonProvider();
     }
 
-    private function createPdfProvider(): PdfProvider {
+    private function createPdfProvider(): PdfProvider
+    {
         return new PdfProvider();
     }
 
-    private function createHtmlProvider(): HtmlProvider {
+    private function createHtmlProvider(): HtmlProvider
+    {
         return new HtmlProvider();
+    }
+
+    private function createTextProvider(): TextProvider
+    {
+        return new TextProvider();
     }
 
 }

@@ -11,7 +11,7 @@
 
 <body>
 <div class="container mt-5">
-    <h2 class="text-center mb-3">{{$report->title}}</h2>
+    <h2 class="text-center mb-3">{{$report['title']}}</h2>
 
     <table class="table table-bordered mb-5">
         <thead>
@@ -28,17 +28,17 @@
         </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>{{ $report->wind }}</td>
-                <td>{{ $report->visibility }}</td>
-                <td>{{ $report->sky_conditions }}</td>
-                <td>{{ $report->temperature }}</td>
-                <td>{{ $report->dew_point }}</td>
-                <td>{{ $report->relative_humidity }}]</td>
-                <td>{{ $report->{'pressure(altimeter)'} }}</td>
-                <td>{{ $report->ob }}</td>
-                <td>{{ $report->cycle }}</td>
-            </tr>
+        <tr>
+            <td>{{ $report['wind'] }}</td>
+            <td>{{ $report['visibility'] }}</td>
+            <td>{{ $report['sky_conditions'] }}</td>
+            <td>{{ $report['temperature'] }}</td>
+            <td>{{ $report['dew_point'] }}</td>
+            <td>{{ $report['relative_humidity'] }}]</td>
+            <td>{{ $report['pressure(altimeter)'] }}</td>
+            <td>{{ $report['ob'] }}</td>
+            <td>{{ $report['cycle'] }}</td>
+        </tr>
         </tbody>
     </table>
 

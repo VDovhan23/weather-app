@@ -5,6 +5,7 @@ namespace App\System\Report\Repositories;
 use App\System\Report\DTO\ReportDTO;
 use App\System\Report\Facades\FormatFacade;
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
 use Illuminate\Config\Repository;
 
 class ReportRepository implements ReportRepositoryInterface
@@ -19,7 +20,11 @@ class ReportRepository implements ReportRepositoryInterface
 
         $client = new Client();
 
-        $content = $client->get($url)->getBody()->getContents();
+        try {
+            $content = $client->get($url)->getBody()->getContents();
+        } catch (ClientException $clientException) {
+            return $clientException->getMessage(); // mb can be modified in better way
+        }
 
         return FormatFacade::provider($reportDTO->getFormat())->formResponse($content);
 
