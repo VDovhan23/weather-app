@@ -2,11 +2,11 @@
 
 namespace App\System\Report\Providers;
 
-class TextProvider extends AbstractFormatProvider
+class TextProvider implements FormatProviderInterface
 {
 
-    public function formResponse(string $content)
+    public function formResponse($weatherReportArray)
     {
-        return $content;
+        return $weatherReportArray;
     }
 }

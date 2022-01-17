@@ -2,12 +2,10 @@
 
 namespace App\System\Report\Providers;
 
-class HtmlProvider extends AbstractFormatProvider
+class HtmlProvider implements FormatProviderInterface
 {
-    public function formResponse(string $content)
+    public function formResponse(array $weatherReportArray)
     {
-        $weatherReportObject = $this->getWeatherReportObject($content);
-
-        return view('Report\report', ['report' => $weatherReportObject]);
+        return view('Report\report', ['report' => $weatherReportArray]);
     }
 }

@@ -2,13 +2,11 @@
 
 namespace App\System\Report\Providers;
 
-class JsonProvider extends AbstractFormatProvider
+class JsonProvider implements FormatProviderInterface
 {
 
-    public function formResponse(string $content)
+    public function formResponse(array $weatherReportArray)
     {
-        $weatherReportObject = $this->getWeatherReportObject($content);
-
-        return json_encode($weatherReportObject);
+        return json_encode($weatherReportArray);
     }
 }

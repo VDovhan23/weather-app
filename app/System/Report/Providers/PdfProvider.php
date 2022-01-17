@@ -4,14 +4,12 @@ namespace App\System\Report\Providers;
 
 use Barryvdh\DomPDF\Facade as PDF;
 
-class PdfProvider extends AbstractFormatProvider
+class PdfProvider implements FormatProviderInterface
 {
 
-    public function formResponse(string $content)
+    public function formResponse(array $weatherReportArray)
     {
-        $weatherReportObject = $this->getWeatherReportObject($content);
-
-        $pdf = PDF::loadView('Report\report', ['report' => $weatherReportObject]);
+        $pdf = PDF::loadView('Report\report', ['report' => $weatherReportArray]);
         return $pdf->download('pdfview.pdf');
     }
 }

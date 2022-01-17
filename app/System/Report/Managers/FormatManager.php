@@ -15,7 +15,7 @@ class FormatManager
         $driverMethod = 'create' . ucfirst($format) . 'Provider';
 
         if (!method_exists($this, $driverMethod)) {
-            throw new InvalidArgumentException(sprintf('Format [%s] is not supported', $format));
+            throw new InvalidArgumentException(sprintf('Format [%s] is not supported.', $format));
         }
 
         return $this->{$driverMethod}();
