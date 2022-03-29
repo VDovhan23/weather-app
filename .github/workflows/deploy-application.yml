@@ -1,0 +1,13 @@
+name: Deploy Application
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-deployment-artifans:
+    name: Create Deployment Artifans
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v2
