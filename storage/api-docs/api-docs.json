@@ -1,0 +1,22 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Weather APP",
+        "version": "0.1"
+    },
+    "paths": {
+        "/report": {
+            "get": {
+                "operationId": "fe0b8d4cbf71205e26edfaac0b91fc35",
+                "responses": {
+                    "200": {
+                        "description": "Get weather report."
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
