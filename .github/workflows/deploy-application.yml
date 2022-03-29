@@ -3,7 +3,7 @@ name: Deploy Application
 on:
   pull_request:
     branches:
-      - *
+      - main
 
 jobs:
   create-deployment-artifans:
