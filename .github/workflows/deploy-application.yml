@@ -21,3 +21,6 @@ jobs:
 
       - name: Install Composer
         run: composer install --no-dev --no-interaction --prefer-dist
+
+      -name: Run Tests
+        run: php artisan test
