@@ -24,8 +24,8 @@ jobs:
 
       - name: Prepare Laravel Application
         run: |
-        cp .env.ci .env
-        php artisan key:generate
+          cp .env.ci .env
+          php artisan key:generate
 
       - name: Run Tests
         run: vendor/bin/phpunit tests/
