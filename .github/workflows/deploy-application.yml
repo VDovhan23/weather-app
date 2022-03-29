@@ -17,10 +17,13 @@ jobs:
         with:
           php-version: 8.0
           extensions: mbstring, ctype, fileinfo, openssl, PDO, bcmath, json, tokenizer, xml
-
+          coverage: xdebug #optional
 
       - name: Install Composer
         run: composer install --no-dev --no-interaction --prefer-dist
 
       - name: Run Tests
-        run: php artisan test
+        run: vendor/bin/phpunit
+
+      - name: Copy Env File
+        run: cp .env.testing .env
