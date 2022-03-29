@@ -10,4 +10,4 @@ jobs:
     name: Create Deployment Artifans
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v2
+      - uses: actions/checkout@v3
