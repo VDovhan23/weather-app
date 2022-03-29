@@ -20,7 +20,7 @@ jobs:
           coverage: xdebug #optional
 
       - name: Install Composer
-        run: composer install --no-dev --no-interaction --prefer-dist
+        run: composer install --no-scripts
 
       - name: Run Tests
         run: vendor/bin/phpunit tests/
